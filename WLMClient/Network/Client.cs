@@ -60,6 +60,7 @@ namespace WLMClient.Network
             try
             {
                 connectionInfo = new ConnectionInfo(Config.Properties.SERVER_ADDRESS, Config.Properties.SERVER_PORT);
+                //var test = JsonConvert.SerializeObject(connectionInfo);
             }
             catch
             {

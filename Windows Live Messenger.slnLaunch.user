@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "WLMClient\\WLMClient.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "WLMServer\\WLMServer.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
