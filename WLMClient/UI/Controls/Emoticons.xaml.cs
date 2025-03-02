@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WLMClient.UI.Controls
 {
@@ -29,13 +22,13 @@ namespace WLMClient.UI.Controls
             this.richTextBox = richTextBox;
             populateList();
         }
-        
+
         public void populateList()
         {
             int positionX = 0;
             int positionY = 0;
             int count = 0;
-            
+
             foreach (string emoticon in Resource.Images.Emoticons.INDEX_IN_IMAGE.Keys)
             {
                 if (count > 5)
@@ -44,7 +37,7 @@ namespace WLMClient.UI.Controls
                     positionX = 0;
                     count = 0;
                 }
-                
+
                 CroppedBitmap smiley = Layout.LoadResource.GetEmoticon(emoticon);
 
                 Border border = new Border();

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using WLMClient.UI.Windows;
-using WLMClient.Resource.Sounds;
+﻿using WLMClient.UI.Windows;
 
 namespace WLMClient.Notification
 {

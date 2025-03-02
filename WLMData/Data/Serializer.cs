@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using WLMData.Data.Packets;
 using System.IO;
-using NetworkCommsDotNet.DPSBase;
+using System.Text;
+using WLMData.Data.Packets;
 
 namespace WLMData.Data
 {

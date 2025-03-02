@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Resources;
 using System.Media;
-using System.Windows.Media;
-using Microsoft.Win32;
-using System.IO;
 using System.Windows;
+using System.Windows.Resources;
 
 namespace WLMClient.Resource.Sounds
 {

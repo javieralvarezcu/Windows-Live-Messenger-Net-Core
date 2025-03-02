@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Windows.Forms;
-
-using System.Net;
-
 using WLMClient.Locale;
 using WLMClient.Network;
-using System.Net.Http;
-using System.IO;
-using System.Net.Http.Headers;
-using System.Security.Policy;
 
 namespace WLMClient.UI.Controls.WinForms
 {

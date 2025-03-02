@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 using System.IO;
+using System.Windows.Forms;
 using System.Windows.Media.Imaging;
-using WLMData.Data.Packets;
 using WLMClient.Layout;
 using WLMClient.Network;
+using WLMData.Data.Packets;
 
 namespace WLMClient.UI.Controls.WinForms
 {

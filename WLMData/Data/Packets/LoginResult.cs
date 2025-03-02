@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using NetworkCommsDotNet.DPSBase;
 using ProtoBuf;
 using System.IO;
-using NetworkCommsDotNet.DPSBase;
 
 namespace WLMData.Data.Packets
 {

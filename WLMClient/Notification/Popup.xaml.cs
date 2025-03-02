@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
+using System.Windows.Threading;
 using WLMClient.UI.Data;
 using WLMClient.UI.Windows;
-using System.Windows.Threading;
 
 namespace WLMClient.Notification
 {
@@ -32,7 +21,7 @@ namespace WLMClient.Notification
             line1.Text = Line1;
             line2.Text = Line2;
             window = Window;
-            
+
             TextParser.ParseText(line1, false);
             TextParser.ParseText(line2, false);
 

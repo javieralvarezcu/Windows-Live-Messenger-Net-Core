@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using System.Xml;
 
@@ -43,7 +40,7 @@ namespace WLMClient.Config
         {
             XmlDocument doc = new XmlDocument();
             doc.LoadXml("<?xml version=\"1.0\" encoding=\"ISO - 8859 - 1\"?><config><OPTION_REMEMBER_ID>0</OPTION_REMEMBER_ID><OPTION_REMEMBER_PASSWORD>0</OPTION_REMEMBER_PASSWORD><OPTION_LOGIN_AUTO>0</OPTION_LOGIN_AUTO><SAVE_ID></SAVE_ID><SAVE_PASS></SAVE_PASS></config>"); //Your string here
-            
+
             XmlTextWriter writer = new XmlTextWriter("SaveData.xml", null);
             writer.Formatting = Formatting.Indented;
             doc.Save(writer);

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WLMData.Enums
+﻿namespace WLMData.Enums
 {
     public enum FriendRequestResponseCode : uint
     {

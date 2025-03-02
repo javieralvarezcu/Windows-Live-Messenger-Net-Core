@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using System.Net;
-using WLMData;
-using NetworkCommsDotNet;
-using NetworkCommsDotNet.Tools;
-using NetworkCommsDotNet.DPSBase;
-using NetworkCommsDotNet.Connections;
+﻿using NetworkCommsDotNet;
 using NetworkCommsDotNet.Connections.TCP;
-using WLMData.Data.Packets;
-using WLMData.Enums;
+using NetworkCommsDotNet.DPSBase;
+using System;
+using System.Collections.Generic;
+using WLMClient.Locale;
 using WLMClient.Network.PacketHandling;
 using WLMClient.UI.Windows;
-using WLMClient.Locale;
+using WLMData.Data.Packets;
+using WLMData.Enums;
 
 namespace WLMClient.Network
 {

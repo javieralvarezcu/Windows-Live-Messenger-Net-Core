@@ -1,30 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using WLMClient.UI.Controls;
-
-using NetworkCommsDotNet;
-using NetworkCommsDotNet.Connections;
-
-using WLMClient.UI.Windows;
-using WLMData.Enums;
-using WLMData.Data.Packets;
-
 using System.Configuration;
-
 using System.Threading;
+using System.Windows;
+using System.Windows.Media.Imaging;
+using WLMClient.UI.Controls;
+using WLMData.Enums;
 
 namespace WLMClient.UI.Windows
 {
@@ -42,7 +22,7 @@ namespace WLMClient.UI.Windows
 
             Config.Properties.SERVER_ADDRESS = ConfigurationManager.AppSettings["server_address"];
             Config.Properties.SERVER_PORT = Convert.ToInt32(ConfigurationManager.AppSettings["server_port"]);
-            
+
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
             InitializeComponent();

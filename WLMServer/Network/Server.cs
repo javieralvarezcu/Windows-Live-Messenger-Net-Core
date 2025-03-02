@@ -1,23 +1,15 @@
-﻿using System;
+﻿using NetworkCommsDotNet;
+using NetworkCommsDotNet.Connections;
+using NetworkCommsDotNet.Connections.TCP;
+using NetworkCommsDotNet.DPSBase;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.Net;
-using NetworkCommsDotNet;
-using NetworkCommsDotNet.DPSBase;
-using NetworkCommsDotNet.Connections;
-using NetworkCommsDotNet.Tools;
-using NetworkCommsDotNet.Connections.TCP;
-
-using WLMData.Enums;
-using WLMData.Data;
-using WLMData.Data.Packets;
-using WLMServer.Network.UserData;
-using WLMServer.Database;
-
 using System.Threading;
+using WLMData.Data.Packets;
+using WLMData.Enums;
+using WLMServer.Database;
+using WLMServer.Network.UserData;
 
 namespace WLMServer.Network
 {
@@ -199,7 +191,7 @@ namespace WLMServer.Network
                     sendUserIsBlocked = true;
                     sendUserName = "(BLOCKED) " + sendUserName;
                 }
-                
+
                 SendPacket(connection, PacketName.sendContact.ToString(), new UserInfo(sendUser.user.id, sendUserName, sendUserComment,
                     sendUserStatus, sendUserAvatar, sendUserIsBlocked));
             }
@@ -272,7 +264,7 @@ namespace WLMServer.Network
             {
                 returnValue = "RESULT: Account creation failed.";
             }
-            
+
             return returnValue;
         }
     }

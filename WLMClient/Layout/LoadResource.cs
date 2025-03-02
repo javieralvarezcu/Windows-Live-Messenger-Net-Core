@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.IO;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-
-using System.Net;
-using System.IO;
-
-using WLMData.Enums;
 using WLMClient.UI.Data.Enums;
-using System.Net.Http;
+using WLMData.Enums;
 
 namespace WLMClient.Layout
 {

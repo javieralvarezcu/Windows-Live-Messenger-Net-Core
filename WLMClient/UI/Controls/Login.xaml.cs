@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 using WLMClient.Config;
-using WLMData.Enums;
 using WLMClient.UI.Data.Enums;
+using WLMData.Enums;
 
 namespace WLMClient.UI.Controls
 {
@@ -35,7 +25,7 @@ namespace WLMClient.UI.Controls
             imagePartnerFrame.Source = Layout.LoadResource.GetAvatarFrameFromStatus(UserStatus.Offline, AvatarSize.Big);
 
             background.Source = new BitmapImage(new Uri(Resource.Images.Identifiers.CHAT_WINDOW_BACKGROUND_WIDE, UriKind.Absolute));
-           
+
             checkAvailable.Source = Layout.LoadResource.GetSmallIconFromStatus(UserStatus.Available);
             checkBusy.Source = Layout.LoadResource.GetSmallIconFromStatus(UserStatus.Busy);
             checkAway.Source = Layout.LoadResource.GetSmallIconFromStatus(UserStatus.Away);

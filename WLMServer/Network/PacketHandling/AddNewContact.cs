@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using NetworkCommsDotNet;
+﻿using NetworkCommsDotNet;
 using NetworkCommsDotNet.Connections;
-using WLMServer.Network;
 
 using WLMData.Enums;
-using WLMData.Data.Packets;
 using WLMServer.Network.UserData;
 
 namespace WLMServer.Network.PacketHandling

@@ -1,26 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using WLMData.Data.Packets;
+using WLMClient.Layout;
+using WLMClient.Locale;
+using WLMClient.Network;
+using WLMClient.UI.Controls.WinForms;
 using WLMClient.UI.Data;
 using WLMClient.UI.Data.Enums;
-using WLMClient.Locale;
+using WLMData.Data.Packets;
 using WLMData.Enums;
-using WLMClient.Layout;
-using WLMClient.UI.Controls.WinForms;
-using WLMClient.Network;
 
 namespace WLMClient.UI.Controls
 {
@@ -531,7 +525,7 @@ namespace WLMClient.UI.Controls
                     {
                         if (contact.richTextBox.ToolTip.ToString() == userFound.id.ToString())
                         {
-  
+
                             contact.image.Source = LoadResource.GetSmallIconFromStatus((UserStatus)userInfo.status);
                             if (userInfo.comment.Length == 0)
                             {

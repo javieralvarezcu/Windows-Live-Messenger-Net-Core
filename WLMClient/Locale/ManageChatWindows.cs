@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using WLMClient.UI.Windows;
-using WLMClient.Locale;
-using WLMData.Data.Packets;
 using WLMClient.Resource.Sounds;
+using WLMClient.UI.Windows;
+using WLMData.Data.Packets;
 using WLMData.Enums;
 
 namespace WLMClient.Locale

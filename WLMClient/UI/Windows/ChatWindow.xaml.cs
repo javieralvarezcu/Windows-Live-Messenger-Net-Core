@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
-using WLMClient.UI.Data.Enums;
 using WLMClient.Layout;
-using WLMData.Enums;
-using WLMData.Data.Packets;
 using WLMClient.Locale;
 using WLMClient.UI.Data;
-
-using System.Threading;
+using WLMClient.UI.Data.Enums;
+using WLMData.Data.Packets;
+using WLMData.Enums;
 
 namespace WLMClient.UI.Windows
 {
@@ -119,7 +111,7 @@ namespace WLMClient.UI.Windows
             txtFrom.Margin = new Thickness(0, 24, 0, 0);
             txtFrom.Padding = new Thickness(0, 0, 0, 0);
             txtFrom.LineHeight = 0.1;
-            
+
             Image paragraphDot = LoadResource.getParagraphRectangle();
             TextPointer pointerParagraphDot = txtChat.CaretPosition.GetInsertionPosition(LogicalDirection.Forward);
             InlineUIContainer inlineParagraphDot = new InlineUIContainer(paragraphDot, pointerParagraphDot);
@@ -477,7 +469,7 @@ namespace WLMClient.UI.Windows
 
             txtChat.Document.Blocks.Add(txtText);
             TextParser.ProcessInlines(txtChat, txtText.Inlines, false);
-            
+
             txtChat.ScrollToEnd();
         }
 

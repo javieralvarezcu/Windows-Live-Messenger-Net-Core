@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using WLMClient.Locale;
@@ -22,8 +15,8 @@ namespace WLMClient.UI.Controls.WinForms
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-           if (txtName.Text.Length > 0 && (txtName.Text.Length < 30) &&
-                !txtName.Text.Contains(" ") && (txtName.Text.Trim().ToLower() != Personal.USER_INFO.id))
+            if (txtName.Text.Length > 0 && (txtName.Text.Length < 30) &&
+                 !txtName.Text.Contains(" ") && (txtName.Text.Trim().ToLower() != Personal.USER_INFO.id))
             {
                 Client.AddNewContact(txtName.Text);
 
