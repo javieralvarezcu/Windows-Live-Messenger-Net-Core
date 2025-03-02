@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
 
 namespace WLMData.Data
 {
@@ -13,14 +14,7 @@ namespace WLMData.Data
     {
         public static T FromBytes<T>(this byte[] inputSource)
         {
-            using (MemoryStream memoryStream = new MemoryStream(inputSource))
-            {
-                BinaryFormatter binaryFormatter = new BinaryFormatter();
-
-                memoryStream.Seek(0, SeekOrigin.Begin);
-
-                return (T)binaryFormatter.Deserialize(memoryStream);
-            }
+            return JsonSerializer.Deserialize<T>(inputSource);
         }
     }
 }
