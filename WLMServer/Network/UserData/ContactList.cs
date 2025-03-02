@@ -5,11 +5,11 @@ namespace WLMServer.Network.UserData
 {
     class ContactList
     {
-        private Dictionary<String, Contact> contacts;
+        private Dictionary<string, Contact> contacts;
 
         public ContactList(string data)
         {
-            contacts = new Dictionary<String, Contact>();
+            contacts = new Dictionary<string, Contact>();
 
             data = data.Trim();
             data = data.Replace(" ", "");
@@ -122,7 +122,7 @@ namespace WLMServer.Network.UserData
         {
             string data = "";
 
-            foreach (KeyValuePair<String, Contact> contact in contacts)
+            foreach (KeyValuePair<string, Contact> contact in contacts)
             {
                 string isBlockedValue = "0";
                 string isAcceptedValue = "0";
@@ -151,7 +151,7 @@ namespace WLMServer.Network.UserData
         {
             List<Contact> contactsList = new List<Contact>();
 
-            foreach (KeyValuePair<String, Contact> contact in contacts)
+            foreach (KeyValuePair<string, Contact> contact in contacts)
             {
                 contactsList.Add(contact.Value);
             }

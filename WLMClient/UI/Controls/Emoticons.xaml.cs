@@ -93,7 +93,7 @@ namespace WLMClient.UI.Controls
             ((Border)sender).BorderBrush = (SolidColorBrush)(new BrushConverter().ConvertFrom("#afafaf")); ;
         }
 
-        private void InsertText(String text, RichTextBox rtb)
+        private void InsertText(string text, RichTextBox rtb)
         {
             rtb.CaretPosition = rtb.CaretPosition.GetPositionAtOffset(0, LogicalDirection.Forward);
             rtb.CaretPosition.InsertTextInRun(text);

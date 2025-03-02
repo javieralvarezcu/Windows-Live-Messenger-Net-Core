@@ -7,9 +7,9 @@ namespace WLMServer.Database
 {
     class PasswordEncrypter
     {
-        private static String Encrypt(String s, byte[] key, byte[] IV)
+        private static string Encrypt(string s, byte[] key, byte[] IV)
         {
-            String result;
+            string result;
             RijndaelManaged rijn = new RijndaelManaged();
             rijn.Mode = CipherMode.ECB;
             rijn.Padding = PaddingMode.Zeros;
@@ -31,7 +31,6 @@ namespace WLMServer.Database
             rijn.Clear();
             return result;
         }
-
         private static String Decrypt(String s, byte[] key, byte[] IV)
         {
             String result;

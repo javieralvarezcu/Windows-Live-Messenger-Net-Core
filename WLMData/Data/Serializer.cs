@@ -20,7 +20,7 @@ namespace WLMData.Data
         {
             byte[] strLengthData = new byte[sizeof(int)]; inputStream.Read(strLengthData, 0, sizeof(int));
             byte[] strData = new byte[BitConverter.ToInt32(strLengthData, 0)]; inputStream.Read(strData, 0, strData.Length);
-            return new String(Encoding.UTF8.GetChars(strData));
+            return new string(Encoding.UTF8.GetChars(strData));
         }
 
         public int DeserializeInt(Stream inputStream)

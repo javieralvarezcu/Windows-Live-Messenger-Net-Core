@@ -11,7 +11,7 @@ namespace WLMServer.Database
 
         public DBConnection()
         {
-            connectionString = String.Format("server={0};user id={1}; password={2}; database=msn; pooling=false; Charset=utf8; Keepalive=60;",
+            connectionString = string.Format("server={0};user id={1}; password={2}; database=msn; pooling=false; Charset=utf8; Keepalive=60;",
                 Config.Properties.DATABASE_HOST, Config.Properties.DATABASE_ID, Config.Properties.DATABASE_PASSWORD);
             dbConnection = new MySqlConnection(connectionString);
             dbConnection.Open();

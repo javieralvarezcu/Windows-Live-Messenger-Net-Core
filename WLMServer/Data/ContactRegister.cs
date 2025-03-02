@@ -19,11 +19,11 @@ namespace WLMServer.Data
 
     class ContactRegister
     {
-        private Dictionary<String, Contact> contacts;
+        private Dictionary<string, Contact> contacts;
 
         public ContactRegister(string contactDataString)
         {
-            contacts = new Dictionary<String, Contact>();
+            contacts = new Dictionary<string, Contact>();
 
             contactDataString = contactDataString.Trim();
             contactDataString = contactDataString.Replace(" ", "");

@@ -378,7 +378,7 @@ namespace WLMClient.UI.Windows
             }
         }
 
-        private void InsertText(String text, RichTextBox rtb)
+        private void InsertText(string text, RichTextBox rtb)
         {
             rtb.CaretPosition = rtb.CaretPosition.GetPositionAtOffset(0, LogicalDirection.Forward);
             rtb.CaretPosition.InsertTextInRun(text);

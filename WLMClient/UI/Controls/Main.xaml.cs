@@ -582,7 +582,7 @@ namespace WLMClient.UI.Controls
                 }
             }
 
-            txtFriends.Text = String.Format("Friends ({0}/{1})", countOnlineContacts, Personal.USER_CONTACTS.Count);
+            txtFriends.Text = string.Format("Friends ({0}/{1})", countOnlineContacts, Personal.USER_CONTACTS.Count);
         }
 
         private void btnAddFriend_Click(object sender, RoutedEventArgs e)
