@@ -70,7 +70,7 @@ namespace WLMClient.Config
 
                 configDoc.Save("SaveData.xml");
             }
-            catch (Exception e)
+            catch (Exception)
             {
             }
         }

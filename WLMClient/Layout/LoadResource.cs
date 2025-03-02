@@ -13,6 +13,7 @@ using System.IO;
 
 using WLMData.Enums;
 using WLMClient.UI.Data.Enums;
+using System.Net.Http;
 
 namespace WLMClient.Layout
 {
@@ -138,8 +139,8 @@ namespace WLMClient.Layout
         {
             try
             {
-                WebClient wc = new WebClient();
-                var bytes = wc.DownloadData(avatar.Trim());
+                HttpClient wc = new HttpClient();
+                var bytes = wc.GetByteArrayAsync(avatar.Trim()).Result;
 
                 MemoryStream ms = new MemoryStream(bytes);
 

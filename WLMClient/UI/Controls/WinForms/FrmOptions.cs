@@ -11,6 +11,10 @@ using System.Net;
 
 using WLMClient.Locale;
 using WLMClient.Network;
+using System.Net.Http;
+using System.IO;
+using System.Net.Http.Headers;
+using System.Security.Policy;
 
 namespace WLMClient.UI.Controls.WinForms
 {
@@ -63,7 +67,7 @@ namespace WLMClient.UI.Controls.WinForms
                 {
                     string uploadValue = upload(AppDomain.CurrentDomain.BaseDirectory + name);
 
-                    if (uploadValue == "0")
+                    if (uploadValue != "OK")
                     {
                         MessageBox.Show("Failed to upload imagine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -84,21 +88,20 @@ namespace WLMClient.UI.Controls.WinForms
 
         public static string upload(string file)
         {
-            string returnValue = "0";
-
             string url = Config.Properties.AVATAR_IMAGE_UPLOAD_URL;
-            using (var client = new WebClient())
+            byte[] bytes = System.IO.File.ReadAllBytes(file);
+
+            using (var content = new ByteArrayContent(bytes))
             {
-                byte[] result = client.UploadFile(url, "POST", file);
-                string responseAsString = Encoding.Default.GetString(result);
+                content.Headers.ContentType = new MediaTypeHeaderValue("*/*");
 
-                if (responseAsString.Trim() != "0")
-                {
-                    returnValue = responseAsString;
-                }
+                //Send it
+                var response = new HttpClient().PostAsync(url, content).Result;
+                response.EnsureSuccessStatusCode();
+                Stream responseStream = response.Content.ReadAsStreamAsync().Result;
+                StreamReader reader = new StreamReader(responseStream);
+                return response.StatusCode.ToString();
             }
-
-            return returnValue;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

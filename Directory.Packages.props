@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <NoWarn>$(NoWarn);NU1507</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Helios" Version="2.1.3" />
+    <PackageVersion Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageVersion Include="NetworkCommsDotNet" Version="3.0.4" />
+    <PackageVersion Include="protobuf-net" Version="3.2.46" />
+    <PackageVersion Include="System.Collections.Immutable" Version="9.0.2" />
+    <PackageVersion Include="System.Configuration.ConfigurationManager" Version="9.0.2" />
+    <PackageVersion Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.0" />
+  </ItemGroup>
+</Project>
